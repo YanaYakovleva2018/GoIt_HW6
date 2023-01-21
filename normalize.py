@@ -11,5 +11,5 @@ for c, l in zip(CYRILLIC_SYMBOLS, LATIN_SYMBOLS):
 def normalize(name): #replace Cyrillic characters with Latin 
     global TRANS
     new_name = name.translate(TRANS)
-    new_name = re.sub(r'\W','.', new_name)
+    new_name = re.sub(r'\W','_', new_name)
     return new_name
